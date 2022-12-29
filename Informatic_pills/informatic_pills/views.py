@@ -12,6 +12,7 @@ class persona():
 
 
 def saludo(request):
+<<<<<<< HEAD
     p1 = persona("david", 'luques')
     p2 = persona('Profeso', 'Juan')
     time = datetime.datetime.now()
@@ -37,6 +38,19 @@ def cursoCeseese (request):
 
 
 def bye(request):
+=======
+   p1=persona('david','luques')
+   time=datetime.datetime.now()
+   doc_externo=open("C:/Users/User/Desktop/django_pildoras_informaticas/Informatic_pills/informatic_pills/plantillas/miplantilla.html")
+   plt=Template(doc_externo.read())
+   doc_externo.close()
+   temasDelCurso=["plantillas","Modelos","Formularios","Vistas","Despliegue"]
+   ctx=Context({"nombre_persona":p1.nombre,"apellido_persona":p1.apellido,"actual":time, "temas":temasDelCurso})
+   documento=plt.render(ctx)
+   return HttpResponse(documento)
+
+def bye (request):
+>>>>>>> d670e55414571e5ac4add661d5a3e2abb4efe5d2
     return HttpResponse('bye everyone')
 
 
