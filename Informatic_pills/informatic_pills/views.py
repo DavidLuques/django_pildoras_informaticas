@@ -11,7 +11,7 @@ class persona():
 def saludo(request):
    p1=persona('david','luques')
    time=datetime.datetime.now()
-   doc_externo=open("C:/Users/Globons/Desktop/practice/pildoras_informaticas/Informatic_pills/informatic_pills/plantillas/miplantilla.html")
+   doc_externo=open("C:/Users/User/Desktop/django_pildoras_informaticas/Informatic_pills/informatic_pills/plantillas/miplantilla.html")
    plt=Template(doc_externo.read())
    doc_externo.close()
    temasDelCurso=["plantillas","Modelos","Formularios","Vistas","Despliegue"]
