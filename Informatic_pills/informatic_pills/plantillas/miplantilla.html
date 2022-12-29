@@ -11,16 +11,33 @@
     <title>David</title>
 </head>
 <body>
+{% include 'superior/barra.html' %}
+
+
 <h1 >this is my resume ! </h1>
+
+{# this is a one line commment  don't be afraid and ignore this line ...   u know ;p #}
+{% comment %}
+this is a multiple line
+comment
+{% endcomment %}
+
+{% if nombre_persona  == 'Profesor' %}
+<p>El curso lo imparte el profesor titular </p>
+{% else %}
+ <p> el curso lo imparte el profesor SUPLENTE  wey</p>
+{% endif %}
+
+
 <div class="container">
     <h3 >son las: {{actual.hour}} y {{actual.minute}} el dia es: {{actual.day}} del mes : {{actual.month}} y anio: {{actual.year}} </h3>
 </br>
-<h2>I'm {{nombre_persona}} {{apellido_persona}}</h2>
+<h2>I'm {{nombre_persona.upper}} {{apellido_persona}}</h2>
     <h3><strong>Temas del curso:</strong></h3>
         <ol>
         {% if temas %}
             {% for elTema in temas %}
-            <li>{{elTema}}</li>
+            <li>{{elTema|first|lower}}</li>
             {% endfor %}
             </ol>
 

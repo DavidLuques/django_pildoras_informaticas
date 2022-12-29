@@ -54,7 +54,7 @@ ROOT_URLCONF = 'informatic_pills.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/Globons/Desktop/practice/pildoras_informaticas/Informatic_pills/informatic_pills/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
